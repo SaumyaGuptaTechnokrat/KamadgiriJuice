@@ -92,6 +92,7 @@
     </a>
     <nav class="main-nav" aria-label="Primary">
       <a href="#about">Our Story</a>
+      <a href="#favourites">Favourites</a>
       <a href="#menu">Menu</a>
       <a href="#delivery">Delivery</a>
       <a href="#visit">Visit / Order</a>
@@ -141,6 +142,28 @@
     </div>
   </section>
 
+  <!-- ============ FEATURE STRIP ============ -->
+  <section class="feature-strip" aria-label="Why customers choose us">
+    <div class="wrap feature-strip-inner">
+      <div class="feature-item">
+        <span class="feature-icon" aria-hidden="true">🍇</span>
+        <p>Fruit cut &amp; juiced fresh, order by order</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon" aria-hidden="true">🧊</span>
+        <p>No pre-mixed syrups — real fruit, real ice</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon" aria-hidden="true">⚡</span>
+        <p>Fast counter service, ready in minutes</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon" aria-hidden="true">🛵</span>
+        <p>Doorstep delivery via Zomato</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ ABOUT ============ -->
   <section class="about" id="about">
     <div class="wrap about-inner">
@@ -158,6 +181,80 @@
         <p class="en">— the fragrance of the nation, in every cup of tea.</p>
       </div>
     </div>
+  </section>
+
+  <!-- ============ CAROUSEL ============ -->
+  <section class="favourites" id="favourites" aria-label="Fan favourites carousel">
+    <div class="wrap">
+      <h2 class="section-title">Fan Favourites</h2>
+      <p class="section-lede">The six things regulars order without even looking at the board.</p>
+    </div>
+
+    <div class="carousel" id="carousel">
+      <button class="carousel-arrow carousel-arrow--prev" id="carPrev" aria-label="Previous favourite">&#10094;</button>
+
+      <div class="carousel-viewport">
+        <ul class="carousel-track" id="carTrack">
+          <li class="carousel-card">
+            <div class="carousel-art carousel-art--orange" aria-hidden="true">
+              <svg viewBox="0 0 100 100"><rect x="30" y="20" width="40" height="60" rx="4" fill="#ffb703"/><rect x="30" y="20" width="40" height="14" fill="#ffd166"/><line x1="50" y1="10" x2="50" y2="24" stroke="#fff" stroke-width="4"/></svg>
+            </div>
+            <span class="carousel-badge">Bestseller</span>
+            <h3>Fresh Orange Juice</h3>
+            <p>Cold-pressed on the spot, no added sugar needed.</p>
+          </li>
+
+          <li class="carousel-card">
+            <div class="carousel-art carousel-art--mojito" aria-hidden="true">
+              <svg viewBox="0 0 100 100"><rect x="30" y="20" width="40" height="60" rx="4" fill="#bff0c0" fill-opacity=".55"/><circle cx="42" cy="34" r="7" fill="#2f6f4e"/><circle cx="58" cy="30" r="6" fill="#3f8f5f"/><line x1="55" y1="10" x2="55" y2="26" stroke="#2f6f4e" stroke-width="4"/></svg>
+            </div>
+            <span class="carousel-badge">Crowd favourite</span>
+            <h3>Virgin Mojito</h3>
+            <p>Mint, lime and soda — the go-to summer cooler.</p>
+          </li>
+
+          <li class="carousel-card">
+            <div class="carousel-art carousel-art--choco" aria-hidden="true">
+              <svg viewBox="0 0 100 100"><path d="M32 78 L34 34 Q50 24 66 34 L68 78 Z" fill="#4b2b1a"/><path d="M34 34 Q50 20 66 34 Q50 42 34 34Z" fill="#2b1810"/><circle cx="50" cy="18" r="6" fill="#2b1810"/></svg>
+            </div>
+            <span class="carousel-badge">Indulgent</span>
+            <h3>Loaded Chocolate Shake</h3>
+            <p>Thick, rich, and finished with a chocolate drizzle.</p>
+          </li>
+
+          <li class="carousel-card">
+            <div class="carousel-art carousel-art--tea" aria-hidden="true">
+              <svg viewBox="0 0 100 100"><path d="M28 55 Q28 82 50 82 Q72 82 72 55 Z" fill="#b5651d"/><ellipse cx="50" cy="55" rx="22" ry="7" fill="#7a4416"/><ellipse cx="50" cy="52" rx="18" ry="5" fill="#5a3316"/></svg>
+            </div>
+            <span class="carousel-badge">Signature</span>
+            <h3>Jaggery Tea</h3>
+            <p>Slow-brewed with gud, served piping hot in a clay kulhad.</p>
+          </li>
+
+          <li class="carousel-card">
+            <div class="carousel-art carousel-art--bun" aria-hidden="true">
+              <svg viewBox="0 0 100 100"><ellipse cx="50" cy="55" rx="32" ry="20" fill="#e8a33d"/><ellipse cx="50" cy="48" rx="30" ry="16" fill="#f2c46b"/><path d="M30 46 Q50 60 70 46" stroke="#7a3d0e" stroke-width="3" fill="none"/></svg>
+            </div>
+            <span class="carousel-badge">Snack pick</span>
+            <h3>Nutella Bun</h3>
+            <p>Toasted bun, generous Nutella, gone in four bites.</p>
+          </li>
+
+          <li class="carousel-card">
+            <div class="carousel-art carousel-art--maggi" aria-hidden="true">
+              <svg viewBox="0 0 100 100"><ellipse cx="50" cy="60" rx="34" ry="18" fill="#e6533c"/><path d="M28 55 Q40 45 50 55 Q60 45 72 55" stroke="#ffd166" stroke-width="4" fill="none"/><path d="M30 60 Q42 50 50 60 Q58 50 70 60" stroke="#ffd166" stroke-width="4" fill="none"/></svg>
+            </div>
+            <span class="carousel-badge">Comfort food</span>
+            <h3>Masala Maggi</h3>
+            <p>Spiced, saucy, and topped with fresh coriander.</p>
+          </li>
+        </ul>
+      </div>
+
+      <button class="carousel-arrow carousel-arrow--next" id="carNext" aria-label="Next favourite">&#10095;</button>
+    </div>
+
+    <div class="carousel-dots" id="carDots" role="tablist" aria-label="Choose favourite slide"></div>
   </section>
 
   <!-- ============ MENU ============ -->
@@ -197,7 +294,7 @@
           <li><span>Jaggery (Gud) Tea — kulhad</span></li>
         </ul>
         <h3 class="mini-heading">Hot Coffee</h3>
-        <table class="price-table">
+        <div class="table-scroll"><table class="price-table">
           <thead><tr><th>Item</th><th>Small</th><th>Large</th></tr></thead>
           <tbody>
             <tr><td>Hot Coffee</td><td>₹40</td><td>₹50</td></tr>
@@ -205,13 +302,13 @@
             <tr><td>Caramel Hot Coffee</td><td>₹45</td><td>₹55</td></tr>
             <tr><td>Choco Hot Coffee</td><td>₹45</td><td>₹50</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       <!-- Bullish Sector -->
       <div class="menu-panel" id="panel-bullish" role="tabpanel" hidden>
         <p class="panel-note">Our buttered-bun lineup — named "Bullish Sector" because once you try the Nutella Bun, you're not going anywhere else.</p>
-        <table class="price-table">
+        <div class="table-scroll"><table class="price-table">
           <thead><tr><th>Item</th><th>Price</th></tr></thead>
           <tbody>
             <tr><td>Maska Bun</td><td>₹40</td></tr>
@@ -224,12 +321,12 @@
             <tr><td>Cheese Chutney Maska Bun</td><td>₹60</td></tr>
             <tr><td>Schezwan Cheese Bun</td><td>₹70</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       <!-- Maggi -->
       <div class="menu-panel" id="panel-maggi" role="tabpanel" hidden>
-        <table class="price-table">
+        <div class="table-scroll"><table class="price-table">
           <thead><tr><th>Item</th><th>Price</th></tr></thead>
           <tbody>
             <tr><td>Plain Maggi</td><td>₹50</td></tr>
@@ -240,7 +337,7 @@
             <tr><td>Paneer Maggi</td><td>₹90</td></tr>
             <tr><td>Chef's Special Maggi</td><td>₹100</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       <!-- Ice Cream -->
@@ -289,7 +386,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- ============ VISIT / CONTACT ============ -->
   <section class="visit" id="visit">
     <div class="wrap visit-inner">
@@ -312,9 +409,9 @@
       </div>
     </div>
   </section>
-
+ 
 </main>
-
+ 
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="wrap footer-inner">
@@ -323,7 +420,7 @@
     <p class="footer-copy">© <span id="year"></span> Kamad Giri Juice &amp; Shake. Fresh juices, shakes, jaggery tea &amp; snacks.</p>
   </div>
 </footer>
-
+ 
 <script src="script.js"></script>
 </body>
 </html>
