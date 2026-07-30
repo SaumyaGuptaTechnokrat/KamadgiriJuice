@@ -1,4 +1,3 @@
-
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -118,8 +117,7 @@ if ('IntersectionObserver' in window) {
     Array.from(dotsWrap.children).forEach((dot, i) => {
       dot.classList.toggle('is-active', i === index);
     });
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === maxIndex();
+    // Carousel loops, so prev/next stay enabled at every position.
   }
 
   function next() {
@@ -145,33 +143,68 @@ if ('IntersectionObserver' in window) {
   viewport.addEventListener('focusin', () => clearInterval(autoplayId));
   viewport.addEventListener('focusout', restartAutoplay);
 
-  // Touch / swipe support
+  // Touch / mouse / pen swipe support
   let startX = 0;
+  let startY = 0;
   let deltaX = 0;
   let dragging = false;
+  let axisLocked = null; // 'x' | 'y' | null
+  let baseOffset = 0;
+
+  function currentOffsetPx() {
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(track).gap || 0);
+    return index * (cardWidth + gap);
+  }
 
   track.addEventListener('pointerdown', (e) => {
     dragging = true;
+    axisLocked = null;
     startX = e.clientX;
+    startY = e.clientY;
+    baseOffset = currentOffsetPx();
     clearInterval(autoplayId);
     track.style.transition = 'none';
+    try { track.setPointerCapture(e.pointerId); } catch (err) { /* no-op */ }
   });
+
   track.addEventListener('pointermove', (e) => {
     if (!dragging) return;
     deltaX = e.clientX - startX;
-  });
+    const deltaY = e.clientY - startY;
+
+    if (!axisLocked) {
+      if (Math.abs(deltaX) > 8 || Math.abs(deltaY) > 8) {
+        axisLocked = Math.abs(deltaX) > Math.abs(deltaY) ? 'x' : 'y';
+      }
+    }
+
+    if (axisLocked === 'x') {
+      e.preventDefault(); // stop vertical page scroll only once a horizontal swipe is confirmed
+      track.style.transform = `translateX(${-baseOffset + deltaX}px)`;
+    }
+  }, { passive: false });
+
   function endDrag() {
     if (!dragging) return;
     dragging = false;
     track.style.transition = '';
-    if (deltaX > 50) prev();
-    else if (deltaX < -50) next();
-    else update();
+    if (axisLocked === 'x') {
+      if (deltaX > 50) prev();
+      else if (deltaX < -50) next();
+      else update();
+    }
     deltaX = 0;
+    axisLocked = null;
     restartAutoplay();
   }
   track.addEventListener('pointerup', endDrag);
-  track.addEventListener('pointerleave', endDrag);
+  track.addEventListener('pointercancel', endDrag);
+  track.addEventListener('pointerleave', (e) => {
+    // Only end the drag if the pointer actually left while dragging with a mouse;
+    // touch pointers are captured so this won't fire mid-swipe on mobile.
+    if (dragging && e.pointerType === 'mouse') endDrag();
+  });
 
   // Keyboard support
   viewport.setAttribute('tabindex', '0');
