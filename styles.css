@@ -247,12 +247,19 @@ p{ margin:0 0 1em; }
   display:flex; align-items:center; gap:14px;
   max-width:var(--wrap); margin:0 auto; padding:0 24px;
 }
-.carousel-viewport{ overflow:hidden; flex:1; }
+.carousel-viewport{ overflow:hidden; flex:1; touch-action:pan-y; }
 .carousel-track{
   display:flex; gap:22px;
   transition:transform .5s var(--ease);
   will-change:transform;
+  touch-action:pan-y;
+  cursor:grab;
+  user-select:none;
+  -webkit-user-select:none;
 }
+.carousel-track:active{ cursor:grabbing; }
+.carousel-card{ -webkit-user-drag:none; }
+.carousel-card img{ pointer-events:none; }
 .carousel-card{
   flex:0 0 clamp(220px, 27vw, 270px);
   background:#fff;
@@ -462,6 +469,7 @@ p{ margin:0 0 1em; }
   .signboard-title .line2{ font-size:1.8rem; }
   .carousel-card{ flex-basis:82vw; }
 }
+
  
 @media (prefers-reduced-motion: reduce){
   *{ transition:none !important; scroll-behavior:auto !important; }
