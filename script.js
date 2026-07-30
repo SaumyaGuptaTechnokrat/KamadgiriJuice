@@ -47,7 +47,7 @@ tabButtons.forEach(btn => {
 
 // Scroll-reveal for sections
 const revealTargets = document.querySelectorAll(
-  '.about-inner, .feature-item, .section-title, .section-lede, .carousel, .menu-tabs, .menu-panel, .delivery-inner, .visit-grid'
+  '.about-inner, .feature-item, .section-title, .section-lede, .gallery-item, .carousel, .menu-tabs, .menu-panel, .delivery-inner, .visit-grid'
 );
 revealTargets.forEach(el => el.classList.add('reveal'));
 
