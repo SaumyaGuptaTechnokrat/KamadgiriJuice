@@ -278,7 +278,7 @@ p{ margin:0 0 1em; }
 .value-list strong{ display:block; font-size:0.98rem; color:var(--ink); }
 .value-list p{ margin:2px 0 0; font-size:0.86rem; color:var(--ink-soft); }
 .tagline-card{ margin-top:8px; background:linear-gradient(155deg, var(--maroon), var(--maroon-deep)); color:var(--turmeric); border-radius:var(--radius); padding:24px 26px; box-shadow:var(--shadow-lift); }
-.tagline-card .hi{ font-family:var(--font-hi); font-size:1.2rem; font-weight:700; margin:0 0 6px; }
+.tagline-card .hi{ font-family:var(--font-hi); font-size:1.2rem; font-weight:700; margin:0 0 6px; color:white;}
 .tagline-card .en{ margin:0; font-style:italic; color:var(--cream); font-size:0.9rem; }
 
 /* ---------- Menu ---------- */
