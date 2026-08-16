@@ -267,7 +267,7 @@ p{ margin:0 0 1em; }
 .split-media .badge-float strong{ display:block; font-family:var(--font-display); font-size:1.5rem; font-weight:400; }
 .split-media .badge-float span{ display:block; font-size:0.68rem; font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.08em; color:var(--turmeric-soft); }
 .split h2{ font-size:clamp(1.6rem,3.2vw,2.2rem); margin-bottom:18px; }
-.split p{ color:var(--ink-soft); }
+.split p{ color: white; }
 .value-list{ margin:26px 0 30px; display:flex; flex-direction:column; gap:18px; }
 .value-list li{ display:flex; gap:14px; align-items:flex-start; }
 .value-list .dot{ width:10px; height:10px; border-radius:50%; background:var(--turmeric); flex-shrink:0; margin-top:7px; box-shadow:0 0 0 4px var(--cream-2); }
