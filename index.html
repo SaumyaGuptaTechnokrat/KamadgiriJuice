@@ -26,7 +26,6 @@
 
 <link rel="stylesheet" href="styles.css">
 
-<!-- Structured data for local business SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,41 +42,7 @@
   ],
   "acceptsReservations": "False",
   "menu": "https://www.kamadgirijuiceandshake.com/#menu",
-  "slogan": "हर चाय में देश की महक",
-  "hasMenu": {
-    "@type": "Menu",
-    "name": "Kamad Giri Juice & Shake Menu",
-    "hasMenuSection": [
-      {
-        "@type": "MenuSection",
-        "name": "Juices & Shakes",
-        "hasMenuItem": [
-          {"@type": "MenuItem", "name": "Fresh Orange Juice"},
-          {"@type": "MenuItem", "name": "Mix Fruit Juice"},
-          {"@type": "MenuItem", "name": "Virgin Mojito"},
-          {"@type": "MenuItem", "name": "Pomegranate Juice"},
-          {"@type": "MenuItem", "name": "Cold Coffee Shake"},
-          {"@type": "MenuItem", "name": "Loaded Chocolate Shake"}
-        ]
-      },
-      {
-        "@type": "MenuSection",
-        "name": "Bullish Sector (Buns)",
-        "hasMenuItem": [
-          {"@type": "MenuItem", "name": "Maska Bun", "offers": {"@type": "Offer", "price": "40", "priceCurrency": "INR"}},
-          {"@type": "MenuItem", "name": "Nutella Bun", "offers": {"@type": "Offer", "price": "100", "priceCurrency": "INR"}}
-        ]
-      },
-      {
-        "@type": "MenuSection",
-        "name": "Maggie",
-        "hasMenuItem": [
-          {"@type": "MenuItem", "name": "Masala Maggi", "offers": {"@type": "Offer", "price": "60", "priceCurrency": "INR"}},
-          {"@type": "MenuItem", "name": "Paneer Maggi", "offers": {"@type": "Offer", "price": "90", "priceCurrency": "INR"}}
-        ]
-      }
-    ]
-  }
+  "slogan": "हर चाय में देश की महक"
 }
 </script>
 </head>
@@ -85,28 +50,33 @@
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ============ HEADER ============ -->
-<header class="site-header">
-  <div class="wrap header-inner">
+<!-- ============ TOP NAV ============ -->
+<header class="topnav">
+  <div class="wrap nav-inner">
     <a href="#top" class="brand">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 60 60" width="40" height="40">
-          <circle cx="30" cy="30" r="29" fill="var(--maroon)" stroke="var(--turmeric)" stroke-width="2"/>
-          <path d="M20 38 Q30 14 40 38 Q30 30 20 38Z" fill="var(--turmeric)"/>
-          <circle cx="30" cy="42" r="3" fill="var(--cream)"/>
+        <svg viewBox="0 0 60 60" width="38" height="38">
+          <circle cx="30" cy="30" r="29" fill="#A31621" stroke="#F4C430" stroke-width="2"/>
+          <path d="M20 38 Q30 14 40 38 Q30 30 20 38Z" fill="#F4C430"/>
+          <circle cx="30" cy="42" r="3" fill="#FFF6E9"/>
         </svg>
       </span>
-      <span class="brand-text">Kamad Giri<em>Juice &amp; Shake</em></span>
+      <span class="brand-text">
+        <span class="name">Kamad Giri</span>
+        <span class="tag">Juice &amp; Shake</span>
+      </span>
     </a>
-    <nav class="main-nav" aria-label="Primary">
+    <nav class="nav-links" aria-label="Primary">
       <a href="#about">Our Story</a>
-      <a href="#gallery">Gallery</a>
       <a href="#favourites">Favourites</a>
       <a href="#menu">Menu</a>
       <a href="#delivery">Delivery</a>
-      <a href="#visit">Visit / Order</a>
+      <a href="#visit">Visit</a>
     </nav>
-    <a class="btn btn-call" href="tel:+917800795448">📞 Call to Order</a>
+    <div class="nav-cta">
+      <a href="tel:+917800795448" class="btn btn-outline btn-sm btn-nav-call">📞 Call to Order</a>
+      <a href="#menu" class="btn btn-gold btn-sm">See Menu</a>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -119,109 +89,109 @@
   <section class="hero" id="top">
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">Fresh &nbsp;•&nbsp; Roadside &nbsp;•&nbsp; Made-to-order</p>
-        <h1 class="signboard-title">
-          <span class="line1">KAMAD GIRI</span>
-          <span class="line2">JUICE <span class="amp">&amp;</span> SHAKE</span>
-        </h1>
-        <p class="hero-sub-hi">कमाद में जो चाय पियेगा, वो देश की मिट्टी चमकेगा।</p>
-        <p class="hero-sub-en">Whoever drinks tea at Kamad Giri — carries the shine of the nation's soil in every sip.</p>
+        <p class="eyebrow">Fresh · Roadside · Made-to-order</p>
+        <h1>Real fruit, real ice —<br><em>no shortcuts, no syrup.</em></h1>
+        <p class="hero-hi">कमाद में जो चाय पियेगा, वो देश की मिट्टी चमकेगा।</p>
+        <p class="hero-en">Whoever drinks tea at Kamad Giri carries the shine of the nation's soil in every sip.</p>
         <div class="hero-cta">
-          <a href="#menu" class="btn btn-primary">See Full Menu</a>
-          <a href="#delivery" class="btn btn-ghost">Order for Delivery</a>
+          <a href="#menu" class="btn btn-gold">See Full Menu</a>
+          <a href="#delivery" class="btn btn-outline">Order for Delivery</a>
         </div>
-        <ul class="hero-tags">
-          <li>🍊 Fresh Fruit Juices</li>
-          <li>🥤 Loaded Shakes</li>
-          <li>🍵 Jaggery Tea</li>
-          <li>🍳 Maggi &amp; Snacks</li>
-        </ul>
+        <div class="hero-stats">
+          <div><strong>15+</strong><span>Juices, shakes &amp; coolers</span></div>
+          <div><strong>₹300</strong><span>Minimum order for delivery</span></div>
+          <div><strong>2</strong><span>Numbers to call &amp; order</span></div>
+        </div>
       </div>
 
-      <div class="hero-signboard" role="img" aria-label="Honeycomb of the shop's signature drinks: orange juice, mixed fruit juice, mint mojito, fruit punch, loaded chocolate shake and jaggery tea in a clay kulhad">
+      <div class="hero-visual" role="img" aria-label="Honeycomb of the shop's signature drinks: orange juice, mixed fruit juice, mint mojito, fruit punch, loaded chocolate shake and jaggery tea in a clay kulhad">
+        <div class="glow-ring" aria-hidden="true"></div>
         <div class="hex-grid">
           <div class="hex hex-orange"><div class="hex-in"><svg viewBox="0 0 100 100"><rect x="30" y="20" width="40" height="60" rx="4" fill="#ffb703"/><rect x="30" y="20" width="40" height="14" fill="#ffd166"/><line x1="50" y1="10" x2="50" y2="24" stroke="#fff" stroke-width="4"/></svg><span>Orange Juice</span></div></div>
           <div class="hex hex-mix"><div class="hex-in"><svg viewBox="0 0 100 100"><rect x="32" y="22" width="36" height="56" rx="4" fill="#7a1f3d"/><rect x="32" y="22" width="36" height="12" fill="#c23b5d"/><line x1="50" y1="12" x2="50" y2="26" stroke="#fff" stroke-width="4"/></svg><span>Mix Fruit Juice</span></div></div>
           <div class="hex hex-mojito"><div class="hex-in"><svg viewBox="0 0 100 100"><rect x="30" y="20" width="40" height="60" rx="4" fill="#bff0c0" fill-opacity=".55"/><circle cx="42" cy="34" r="7" fill="#2f6f4e"/><circle cx="58" cy="30" r="6" fill="#3f8f5f"/><line x1="55" y1="10" x2="55" y2="26" stroke="#2f6f4e" stroke-width="4"/></svg><span>Mint Mojito</span></div></div>
           <div class="hex hex-punch"><div class="hex-in"><svg viewBox="0 0 100 100"><rect x="30" y="22" width="40" height="58" rx="4" fill="#ff7a33"/><rect x="30" y="22" width="40" height="12" fill="#ffb37a"/><line x1="46" y1="12" x2="46" y2="26" stroke="#fff" stroke-width="3"/><line x1="58" y1="12" x2="58" y2="26" stroke="#fff" stroke-width="3"/></svg><span>Fruit Punch</span></div></div>
-          <div class="hex hex-choco"><div class="hex-in"><svg viewBox="0 0 100 100"><path d="M32 78 L34 34 Q50 24 66 34 L68 78 Z" fill="#4b2b1a"/><path d="M34 34 Q50 20 66 34 Q50 42 34 34Z" fill="#2b1810"/><circle cx="50" cy="18" r="6" fill="#2b1810"/></svg><span>Loaded Choco Shake</span></div></div>
+          <div class="hex hex-choco"><div class="hex-in"><svg viewBox="0 0 100 100"><path d="M32 78 L34 34 Q50 24 66 34 L68 78 Z" fill="#4b2b1a"/><path d="M34 34 Q50 20 66 34 Q50 42 34 34Z" fill="#2b1810"/><circle cx="50" cy="18" r="6" fill="#2b1810"/></svg><span>Choco Shake</span></div></div>
           <div class="hex hex-tea"><div class="hex-in"><svg viewBox="0 0 100 100"><path d="M28 55 Q28 82 50 82 Q72 82 72 55 Z" fill="#b5651d"/><ellipse cx="50" cy="55" rx="22" ry="7" fill="#7a4416"/><ellipse cx="50" cy="52" rx="18" ry="5" fill="#5a3316"/></svg><span>Jaggery Tea</span></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ FEATURE STRIP ============ -->
-  <section class="feature-strip" aria-label="Why customers choose us">
-    <div class="wrap feature-strip-inner">
-      <div class="feature-item">
-        <span class="feature-icon" aria-hidden="true">🍇</span>
-        <p>Fruit cut &amp; juiced fresh, order by order</p>
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="trust-strip" aria-label="Why customers choose us">
+    <div class="wrap trust-grid">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4z" stroke-linejoin="round"/></svg>
+        <div><strong>Fruit Cut Fresh</strong><span>Juiced order by order, not pre-cut</span></div>
       </div>
-      <div class="feature-item">
-        <span class="feature-icon" aria-hidden="true">🧊</span>
-        <p>No pre-mixed syrups — real fruit, real ice</p>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><strong>No Syrup Shortcuts</strong><span>Real fruit, real ice, every glass</span></div>
       </div>
-      <div class="feature-item">
-        <span class="feature-icon" aria-hidden="true">⚡</span>
-        <p>Fast counter service, ready in minutes</p>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><strong>Fast Counter Service</strong><span>Ready in minutes, no long waits</span></div>
       </div>
-      <div class="feature-item">
-        <span class="feature-icon" aria-hidden="true">🛵</span>
-        <p>Doorstep delivery via Zomato</p>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.4"/><circle cx="17" cy="18" r="2.4"/><path d="M3 18h1l2-9h9l3 5h3v4h-2M6 9h5v3M14 18H9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><strong>Doorstep Delivery</strong><span>Straight to you, via Zomato or call</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ SHOP GALLERY ============ -->
-  <section class="gallery" id="gallery" aria-label="Photos of our shop">
+  <!-- ============ CATEGORIES ============ -->
+  <section class="section" id="categories">
     <div class="wrap">
-      <h2 class="section-title">This Is Us</h2>
-      <p class="section-lede">No stock photos — this is the actual counter, signboard and menu you'll find us at.</p>
-    </div>
+      <div class="section-head">
+        <p class="eyebrow">What's On The Counter</p>
+        <h2 class="section-title">Five ways to cool down (or warm up)</h2>
+        <p class="section-lede">Tap a category to jump straight to it on the menu board below.</p>
+      </div>
 
-    <div class="wrap gallery-grid">
-      <figure class="gallery-item gallery-item--wide">
-        <img src="assets/shop-signboard.jpg" alt="Kamad Giri Juice & Shake hand-painted signboard listing juices, shakes, mojitos and jaggery tea" width="1400" height="1050" loading="lazy">
-        <figcaption>Our signboard — every drink on the menu, painted right on the counter</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="assets/shop-counter-night.jpg" alt="Kamad Giri Juice & Shake counter set up at night with waffle cones, buns and the menu card on display" width="1400" height="1866" loading="lazy">
-        <figcaption>The counter after dark — freshly stacked cones and buns, ready to serve</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="assets/shop-menu-card.jpg" alt="Close-up of the Kamad Giri Juice & Shake and Amruttulya Tea printed menu card with prices" width="1400" height="1866" loading="lazy">
-        <figcaption>Our printed menu card — prices exactly as displayed in-store</figcaption>
-      </figure>
+      <div class="cat-grid">
+        <a href="#menu" class="cat-card" data-goto-tab="juices">
+          <span class="arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cat-icon"><svg viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4z" stroke-linejoin="round"/></svg></span>
+          <h3>Juices &amp; Shakes</h3>
+          <p>Cold-pressed fruit juices, mojitos and loaded thick shakes.</p>
+        </a>
+        <a href="#menu" class="cat-card" data-goto-tab="tea">
+          <span class="arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cat-icon"><svg viewBox="0 0 24 24"><path d="M4 21h14M6 21V13h10v8M4 13V7h12v6M8 4v2M11 4v2M14 4v2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Tea &amp; Coffee</h3>
+          <p>Slow-brewed jaggery tea in a kulhad, plus hot &amp; caramel coffee.</p>
+        </a>
+        <a href="#menu" class="cat-card" data-goto-tab="bullish">
+          <span class="arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cat-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="9" ry="6"/><path d="M6 11q6 6 12 0" stroke-linecap="round"/></svg></span>
+          <h3>Bullish Sector</h3>
+          <p>Our buttered-bun lineup — Maska to Double Nutella.</p>
+        </a>
+        <a href="#menu" class="cat-card" data-goto-tab="maggi">
+          <span class="arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cat-icon"><svg viewBox="0 0 24 24"><path d="M4 10h16l-1.5 9a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7L4 10Z"/><path d="M3 10q3-6 9-6t9 6" stroke-linecap="round"/></svg></span>
+          <h3>Maggi</h3>
+          <p>Spiced, saucy Maggi — plain to Chef's Special.</p>
+        </a>
+        <a href="#menu" class="cat-card" data-goto-tab="icecream">
+          <span class="arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cat-icon"><svg viewBox="0 0 24 24"><path d="M8 11a4 4 0 0 1 8 0v.5H8V11Z"/><path d="M8.5 12 12 21l3.5-9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Ice Cream</h3>
+          <p>Waffle-cone scoops — vanilla to butterscotch.</p>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="about" id="about">
-    <div class="wrap about-inner">
-      <div class="about-badge" aria-hidden="true">
-        <svg viewBox="0 0 120 120" width="96" height="96">
-          <circle cx="60" cy="60" r="56" fill="none" stroke="var(--turmeric)" stroke-width="3" stroke-dasharray="6 6"/>
-          <text x="60" y="55" text-anchor="middle" font-size="13" fill="var(--maroon)" font-family="'Alfa Slab One'">SINCE</text>
-          <text x="60" y="78" text-anchor="middle" font-size="20" fill="var(--maroon)" font-family="'Alfa Slab One'">DAY 1</text>
-        </svg>
-      </div>
-      <h2>A corner stall, an honest cup</h2>
-      <p>Kamad Giri Juice &amp; Shake is the kind of stop you make on the way home — a hand-painted signboard, a steel counter, and someone squeezing your juice while you wait. No shortcuts, no syrup-only "fresh" juice. Just fruit, ice, milk and a kettle of jaggery tea working overtime.</p>
-      <div class="tagline-card">
-        <p class="hi">हर चाय में देश की महक</p>
-        <p class="en">— the fragrance of the nation, in every cup of tea.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CAROUSEL ============ -->
-  <section class="favourites" id="favourites" aria-label="Fan favourites carousel">
+  <!-- ============ FAN FAVOURITES ============ -->
+  <section class="section section-alt" id="favourites" aria-label="Fan favourites carousel">
     <div class="wrap">
-      <h2 class="section-title">Fan Favourites</h2>
-      <p class="section-lede">The six things regulars order without even looking at the board.</p>
+      <div class="section-head">
+        <p class="eyebrow">Fan Favourites</p>
+        <h2 class="section-title">The six things regulars order on sight</h2>
+        <p class="section-lede">No need to look at the board — these are what the counter runs on.</p>
+      </div>
     </div>
 
     <div class="carousel" id="carousel">
@@ -230,57 +200,69 @@
       <div class="carousel-viewport">
         <ul class="carousel-track" id="carTrack">
           <li class="carousel-card">
-            <div class="carousel-art carousel-art--orange" aria-hidden="true">
-              <svg viewBox="0 0 100 100"><rect x="30" y="20" width="40" height="60" rx="4" fill="#ffb703"/><rect x="30" y="20" width="40" height="14" fill="#ffd166"/><line x1="50" y1="10" x2="50" y2="24" stroke="#fff" stroke-width="4"/></svg>
+            <div class="carousel-media">
+              <span class="carousel-badge">Bestseller</span>
+              <div class="carousel-art carousel-art--orange"><svg viewBox="0 0 100 100"><rect x="30" y="20" width="40" height="60" rx="4" fill="#ffb703"/><rect x="30" y="20" width="40" height="14" fill="#ffd166"/><line x1="50" y1="10" x2="50" y2="24" stroke="#fff" stroke-width="4"/></svg></div>
             </div>
-            <span class="carousel-badge">Bestseller</span>
-            <h3>Fresh Orange Juice</h3>
-            <p>Cold-pressed on the spot, no added sugar needed.</p>
+            <div class="carousel-body">
+              <h3>Fresh Orange Juice</h3>
+              <p>Cold-pressed on the spot, no added sugar needed.</p>
+            </div>
           </li>
 
           <li class="carousel-card">
-            <div class="carousel-art carousel-art--mojito" aria-hidden="true">
-              <svg viewBox="0 0 100 100"><rect x="30" y="20" width="40" height="60" rx="4" fill="#bff0c0" fill-opacity=".55"/><circle cx="42" cy="34" r="7" fill="#2f6f4e"/><circle cx="58" cy="30" r="6" fill="#3f8f5f"/><line x1="55" y1="10" x2="55" y2="26" stroke="#2f6f4e" stroke-width="4"/></svg>
+            <div class="carousel-media">
+              <span class="carousel-badge">Crowd favourite</span>
+              <div class="carousel-art carousel-art--mojito"><svg viewBox="0 0 100 100"><rect x="30" y="20" width="40" height="60" rx="4" fill="#bff0c0" fill-opacity=".55"/><circle cx="42" cy="34" r="7" fill="#2f6f4e"/><circle cx="58" cy="30" r="6" fill="#3f8f5f"/><line x1="55" y1="10" x2="55" y2="26" stroke="#2f6f4e" stroke-width="4"/></svg></div>
             </div>
-            <span class="carousel-badge">Crowd favourite</span>
-            <h3>Virgin Mojito</h3>
-            <p>Mint, lime and soda — the go-to summer cooler.</p>
+            <div class="carousel-body">
+              <h3>Virgin Mojito</h3>
+              <p>Mint, lime and soda — the go-to summer cooler.</p>
+            </div>
           </li>
 
           <li class="carousel-card">
-            <div class="carousel-art carousel-art--choco" aria-hidden="true">
-              <svg viewBox="0 0 100 100"><path d="M32 78 L34 34 Q50 24 66 34 L68 78 Z" fill="#4b2b1a"/><path d="M34 34 Q50 20 66 34 Q50 42 34 34Z" fill="#2b1810"/><circle cx="50" cy="18" r="6" fill="#2b1810"/></svg>
+            <div class="carousel-media">
+              <span class="carousel-badge">Indulgent</span>
+              <div class="carousel-art carousel-art--choco"><svg viewBox="0 0 100 100"><path d="M32 78 L34 34 Q50 24 66 34 L68 78 Z" fill="#4b2b1a"/><path d="M34 34 Q50 20 66 34 Q50 42 34 34Z" fill="#2b1810"/><circle cx="50" cy="18" r="6" fill="#2b1810"/></svg></div>
             </div>
-            <span class="carousel-badge">Indulgent</span>
-            <h3>Loaded Chocolate Shake</h3>
-            <p>Thick, rich, and finished with a chocolate drizzle.</p>
+            <div class="carousel-body">
+              <h3>Loaded Chocolate Shake</h3>
+              <p>Thick, rich, and finished with a chocolate drizzle.</p>
+            </div>
           </li>
 
           <li class="carousel-card">
-            <div class="carousel-art carousel-art--tea" aria-hidden="true">
-              <svg viewBox="0 0 100 100"><path d="M28 55 Q28 82 50 82 Q72 82 72 55 Z" fill="#b5651d"/><ellipse cx="50" cy="55" rx="22" ry="7" fill="#7a4416"/><ellipse cx="50" cy="52" rx="18" ry="5" fill="#5a3316"/></svg>
+            <div class="carousel-media">
+              <span class="carousel-badge">Signature</span>
+              <div class="carousel-art carousel-art--tea"><svg viewBox="0 0 100 100"><path d="M28 55 Q28 82 50 82 Q72 82 72 55 Z" fill="#b5651d"/><ellipse cx="50" cy="55" rx="22" ry="7" fill="#7a4416"/><ellipse cx="50" cy="52" rx="18" ry="5" fill="#5a3316"/></svg></div>
             </div>
-            <span class="carousel-badge">Signature</span>
-            <h3>Jaggery Tea</h3>
-            <p>Slow-brewed with gud, served piping hot in a clay kulhad.</p>
+            <div class="carousel-body">
+              <h3>Jaggery Tea</h3>
+              <p>Slow-brewed with gud, served piping hot in a clay kulhad.</p>
+            </div>
           </li>
 
           <li class="carousel-card">
-            <div class="carousel-art carousel-art--bun" aria-hidden="true">
-              <svg viewBox="0 0 100 100"><ellipse cx="50" cy="55" rx="32" ry="20" fill="#e8a33d"/><ellipse cx="50" cy="48" rx="30" ry="16" fill="#f2c46b"/><path d="M30 46 Q50 60 70 46" stroke="#7a3d0e" stroke-width="3" fill="none"/></svg>
+            <div class="carousel-media">
+              <span class="carousel-badge">Snack pick</span>
+              <div class="carousel-art carousel-art--bun"><svg viewBox="0 0 100 100"><ellipse cx="50" cy="55" rx="32" ry="20" fill="#e8a33d"/><ellipse cx="50" cy="48" rx="30" ry="16" fill="#f2c46b"/><path d="M30 46 Q50 60 70 46" stroke="#7a3d0e" stroke-width="3" fill="none"/></svg></div>
             </div>
-            <span class="carousel-badge">Snack pick</span>
-            <h3>Nutella Bun</h3>
-            <p>Toasted bun, generous Nutella, gone in four bites.</p>
+            <div class="carousel-body">
+              <h3>Nutella Bun</h3>
+              <p>Toasted bun, generous Nutella, gone in four bites.</p>
+            </div>
           </li>
 
           <li class="carousel-card">
-            <div class="carousel-art carousel-art--maggi" aria-hidden="true">
-              <svg viewBox="0 0 100 100"><ellipse cx="50" cy="60" rx="34" ry="18" fill="#e6533c"/><path d="M28 55 Q40 45 50 55 Q60 45 72 55" stroke="#ffd166" stroke-width="4" fill="none"/><path d="M30 60 Q42 50 50 60 Q58 50 70 60" stroke="#ffd166" stroke-width="4" fill="none"/></svg>
+            <div class="carousel-media">
+              <span class="carousel-badge">Comfort food</span>
+              <div class="carousel-art carousel-art--maggi"><svg viewBox="0 0 100 100"><ellipse cx="50" cy="60" rx="34" ry="18" fill="#e6533c"/><path d="M28 55 Q40 45 50 55 Q60 45 72 55" stroke="#ffd166" stroke-width="4" fill="none"/><path d="M30 60 Q42 50 50 60 Q58 50 70 60" stroke="#ffd166" stroke-width="4" fill="none"/></svg></div>
             </div>
-            <span class="carousel-badge">Comfort food</span>
-            <h3>Masala Maggi</h3>
-            <p>Spiced, saucy, and topped with fresh coriander.</p>
+            <div class="carousel-body">
+              <h3>Masala Maggi</h3>
+              <p>Spiced, saucy, and topped with fresh coriander.</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -291,11 +273,50 @@
     <div class="carousel-dots" id="carDots" role="tablist" aria-label="Choose favourite slide"></div>
   </section>
 
+  <!-- ============ ABOUT (SPLIT) ============ -->
+  <section class="section" id="about">
+    <div class="wrap split">
+      <div class="split-media">
+        <img src="assets/shop-signboard.jpg" alt="Kamad Giri Juice & Shake hand-painted signboard listing juices, shakes, mojitos and jaggery tea" width="900" height="1125" loading="lazy">
+        <div class="badge-float">
+          <strong>Day 1</strong>
+          <span>Since Opening</span>
+        </div>
+      </div>
+      <div class="split-copy">
+        <p class="eyebrow">Our Story</p>
+        <h2>A corner stall, an honest cup</h2>
+        <p>Kamad Giri Juice &amp; Shake is the kind of stop you make on the way home — a hand-painted signboard, a steel counter, and someone squeezing your juice while you wait. No shortcuts, no syrup-only "fresh" juice. Just fruit, ice, milk and a kettle of jaggery tea working overtime.</p>
+        <ul class="value-list">
+          <li>
+            <span class="dot"></span>
+            <div><strong>Cut &amp; juiced fresh</strong><p>Every order squeezed to the glass, not pre-mixed.</p></div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div><strong>No syrups, ever</strong><p>Real fruit and real ice — that's the whole recipe.</p></div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div><strong>Made to order</strong><p>Nothing sits waiting — it's poured when you ask for it.</p></div>
+          </li>
+        </ul>
+        <div class="tagline-card">
+          <p class="hi">हर चाय में देश की महक</p>
+          <p class="en">— the fragrance of the nation, in every cup of tea.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ MENU ============ -->
-  <section class="menu" id="menu">
+  <section class="section section-alt" id="menu">
     <div class="wrap">
-      <h2 class="section-title">The Menu Board</h2>
-      <p class="section-lede">Everything on our counter, grouped the way it's actually cooked and poured.</p>
+      <div class="section-head">
+        <p class="eyebrow">The Menu Board</p>
+        <h2 class="section-title">Everything on our counter</h2>
+        <p class="section-lede">Grouped the way it's actually cooked and poured.</p>
+      </div>
 
       <div class="menu-tabs" role="tablist" aria-label="Menu categories">
         <button class="tab-btn is-active" role="tab" aria-selected="true" data-tab="juices">Juices &amp; Shakes</button>
@@ -359,9 +380,8 @@
       </div>
 
       <!-- Maggi -->
-            <!-- Maggi -->
       <div class="menu-panel" id="panel-maggi" role="tabpanel" hidden>
-     <div class="table-scroll"><table class="price-table">
+        <div class="table-scroll"><table class="price-table">
           <thead><tr><th>Item</th><th>Price</th></tr></thead>
           <tbody>
             <tr><td>Plain Maggi</td><td>₹50</td></tr>
@@ -374,7 +394,7 @@
           </tbody>
         </table></div>
       </div>
- 
+
       <!-- Ice Cream -->
       <div class="menu-panel" id="panel-icecream" role="tabpanel" hidden>
         <p class="panel-note">Scoops served in a crisp waffle cone. Ask our counter for today's scoop pricing.</p>
@@ -386,14 +406,14 @@
           <li>Mango</li>
         </ul>
       </div>
- 
     </div>
   </section>
- 
+
   <!-- ============ DELIVERY ============ -->
   <section class="delivery" id="delivery">
     <div class="wrap delivery-inner">
       <div class="delivery-copy">
+        <p class="eyebrow">Doorstep Delivery</p>
         <h2>Can't come to the counter?</h2>
         <p>We're on Zomato for doorstep delivery — same juices, same jaggery tea, packed to travel.</p>
         <div class="min-order-card">
@@ -402,60 +422,157 @@
         </div>
         <div class="delivery-actions">
           <a href="#" class="btn btn-zomato">Order on Zomato</a>
-          <a href="tel:+917800795448" class="btn btn-ghost-light">Or call: 78007 95448</a>
+          <a href="tel:+917800795448" class="btn btn-outline">Or call: 78007 95448</a>
         </div>
         <p class="delivery-fine">Direct phone orders are welcome too — call either number below and we'll confirm your order and delivery time.</p>
       </div>
       <div class="delivery-scooter" aria-hidden="true">
         <svg viewBox="0 0 220 160" width="220" height="160">
-          <rect x="10" y="110" width="200" height="6" fill="var(--ink)" opacity=".15"/>
-          <circle cx="55" cy="120" r="18" fill="var(--ink)"/>
-          <circle cx="55" cy="120" r="7" fill="var(--cream)"/>
-          <circle cx="150" cy="120" r="18" fill="var(--ink)"/>
-          <circle cx="150" cy="120" r="7" fill="var(--cream)"/>
-          <path d="M55 120 L90 80 L140 80 L150 120" fill="none" stroke="var(--maroon)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="70" y="55" width="42" height="30" rx="4" fill="var(--maroon)"/>
-          <text x="91" y="76" text-anchor="middle" font-size="12" fill="var(--turmeric)" font-family="'Alfa Slab One'">KG</text>
-          <circle cx="128" cy="66" r="12" fill="var(--ink)"/>
+          <rect x="10" y="110" width="200" height="6" fill="#FFF6E9" opacity=".1"/>
+          <circle cx="55" cy="120" r="18" fill="#F4C430"/>
+          <circle cx="55" cy="120" r="7" fill="#1C0F08"/>
+          <circle cx="150" cy="120" r="18" fill="#F4C430"/>
+          <circle cx="150" cy="120" r="7" fill="#1C0F08"/>
+          <path d="M55 120 L90 80 L140 80 L150 120" fill="none" stroke="#A31621" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="70" y="55" width="42" height="30" rx="4" fill="#A31621"/>
+          <text x="91" y="76" text-anchor="middle" font-size="12" fill="#F4C430" font-family="'Alfa Slab One'">KG</text>
+          <circle cx="128" cy="66" r="12" fill="#F4C430"/>
         </svg>
       </div>
     </div>
   </section>
- 
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <p class="eyebrow">Walk-Ins Welcome</p>
+        <h2>Craving something fresh right now?</h2>
+        <p>Swing by the counter, or call ahead for a bulk order and it'll be ready the moment you arrive.</p>
+        <div class="cta-actions">
+          <a href="tel:+917800795448" class="btn btn-gold">Call 78007 95448</a>
+          <a href="tel:+919410033082" class="btn btn-outline">Call 94100 33082</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ VISIT / CONTACT ============ -->
-  <section class="visit" id="visit">
-    <div class="wrap visit-inner">
-      <h2>Visit the counter</h2>
-      <p class="section-lede">Walk-ins always welcome. Ring ahead for a bulk order and it'll be ready when you arrive.</p>
+  <section class="section section-alt" id="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Find Us</p>
+        <h2 class="section-title">Visit the counter</h2>
+        <p class="section-lede">Walk-ins always welcome. Ring ahead for a bulk order and it'll be ready when you arrive.</p>
+      </div>
       <div class="visit-grid">
         <div class="visit-card">
+          <span class="visit-icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.6 2Z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <h3>Call &amp; Order</h3>
           <a href="tel:+917800795448">+91 78007 95448</a>
           <a href="tel:+919410033082">+91 94100 33082</a>
         </div>
         <div class="visit-card">
+          <span class="visit-icon"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
           <h3>Find Us</h3>
           <p class="placeholder-note">📍 Add your shop address here</p>
         </div>
         <div class="visit-card">
+          <span class="visit-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <h3>Hours</h3>
           <p class="placeholder-note">🕓 Add your opening hours here</p>
         </div>
       </div>
     </div>
   </section>
- 
+
 </main>
- 
+
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
-  <div class="wrap footer-inner">
-    <p class="footer-brand">Kamad Giri Juice &amp; Shake</p>
-    <p class="footer-tag">हर चाय में देश की महक</p>
-    <p class="footer-copy">© <span id="year"></span> Kamad Giri Juice &amp; Shake. Fresh juices, shakes, jaggery tea &amp; snacks.</p>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 60 60" width="34" height="34">
+            <circle cx="30" cy="30" r="29" fill="#A31621" stroke="#F4C430" stroke-width="2"/>
+            <path d="M20 38 Q30 14 40 38 Q30 30 20 38Z" fill="#F4C430"/>
+            <circle cx="30" cy="42" r="3" fill="#FFF6E9"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="name">Kamad Giri</span>
+          <span class="tag">Juice &amp; Shake</span>
+        </span>
+      </a>
+      <p>Fresh juices, loaded shakes, jaggery tea &amp; snacks — squeezed, brewed and served fresh at our roadside counter.</p>
+      <div class="social-row">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1z"/></svg></a>
+        <a href="tel:+917800795448" aria-label="Call"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.6 2Z"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#menu" data-goto-tab="juices">Juices &amp; Shakes</a></li>
+        <li><a href="#menu" data-goto-tab="tea">Tea &amp; Coffee</a></li>
+        <li><a href="#menu" data-goto-tab="bullish">Bullish Sector</a></li>
+        <li><a href="#menu" data-goto-tab="maggi">Maggi</a></li>
+        <li><a href="#menu" data-goto-tab="icecream">Ice Cream</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#favourites">Favourites</a></li>
+        <li><a href="#delivery">Delivery</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get In Touch</h4>
+      <ul>
+        <li><a href="tel:+917800795448">+91 78007 95448</a></li>
+        <li><a href="tel:+919410033082">+91 94100 33082</a></li>
+        <li><a href="#delivery">Order on Zomato</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year"></span> Kamad Giri Juice &amp; Shake. हर चाय में देश की महक</span>
+    <span>Fresh juices, shakes, jaggery tea &amp; snacks.</span>
   </div>
 </footer>
- 
+
+<!-- ============ BOTTOM NAV (mobile) ============ -->
+<nav class="bottomnav" aria-label="Mobile quick navigation">
+  <ul>
+    <li><a href="#top" data-section="top" class="is-active">
+      <svg viewBox="0 0 24 24"><path d="M4 11.5 12 4l8 7.5M6 10v9h5v-5h2v5h5v-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Home
+    </a></li>
+    <li><a href="#menu" data-section="menu">
+      <svg viewBox="0 0 24 24"><path d="M4 21h14M6 21V13h10v8M4 13V7h12v6M8 4v2M11 4v2M14 4v2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Menu
+    </a></li>
+    <li><a href="#favourites" data-section="favourites">
+      <svg viewBox="0 0 24 24"><path d="m12 20-1.5-1.4C5 14 2 11.2 2 7.8 2 5 4.2 3 6.9 3 8.4 3 9.9 3.7 11 5c1.1-1.3 2.6-2 4.1-2C17.8 3 20 5 20 7.8c0 3.4-3 6.2-8.5 10.8L12 20Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Favourites
+    </a></li>
+    <li><a href="tel:+917800795448" class="call-action">
+      <span class="nav-pill">
+        <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.6 2Z"/></svg>
+        Call
+      </span>
+    </a></li>
+  </ul>
+</nav>
+
 <script src="script.js"></script>
 </body>
 </html>
