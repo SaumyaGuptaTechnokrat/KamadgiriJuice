@@ -1,10 +1,11 @@
 // Footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Header shadow on scroll
-const header = document.querySelector('.site-header');
+// Top nav shadow on scroll
+const topnav = document.querySelector('.topnav');
 const onScroll = () => {
-  header.classList.toggle('is-scrolled', window.scrollY > 8);
+  topnav.classList.toggle('is-scrolled', window.scrollY > 8);
 };
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
@@ -12,42 +13,52 @@ window.addEventListener('scroll', onScroll, { passive: true });
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 navToggle.addEventListener('click', () => {
-  const isOpen = header.classList.toggle('is-open');
+  const isOpen = topnav.classList.toggle('is-open');
   navToggle.setAttribute('aria-expanded', String(isOpen));
 });
-document.querySelectorAll('.main-nav a').forEach(link => {
+document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    header.classList.remove('is-open');
+    topnav.classList.remove('is-open');
     navToggle.setAttribute('aria-expanded', 'false');
   });
 });
 
-// Menu tabs
+// Menu tabs (also switchable from category cards via data-goto-tab)
 const tabButtons = document.querySelectorAll('.tab-btn');
 const panels = document.querySelectorAll('.menu-panel');
 
+function activateTab(target) {
+  tabButtons.forEach(b => {
+    const match = b.dataset.tab === target;
+    b.classList.toggle('is-active', match);
+    b.setAttribute('aria-selected', String(match));
+  });
+  panels.forEach(panel => {
+    const isTarget = panel.id === `panel-${target}`;
+    panel.hidden = !isTarget;
+    panel.classList.toggle('is-active', isTarget);
+  });
+}
+
 tabButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const target = btn.dataset.tab;
+  btn.addEventListener('click', () => activateTab(btn.dataset.tab));
+});
 
-    tabButtons.forEach(b => {
-      b.classList.remove('is-active');
-      b.setAttribute('aria-selected', 'false');
-    });
-    btn.classList.add('is-active');
-    btn.setAttribute('aria-selected', 'true');
-
-    panels.forEach(panel => {
-      const isTarget = panel.id === `panel-${target}`;
-      panel.hidden = !isTarget;
-      panel.classList.toggle('is-active', isTarget);
-    });
+document.querySelectorAll('[data-goto-tab]').forEach(el => {
+  el.addEventListener('click', (e) => {
+    const target = el.dataset.gotoTab;
+    activateTab(target);
+    const menuSection = document.getElementById('menu');
+    if (menuSection) {
+      e.preventDefault();
+      menuSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
 });
 
 // Scroll-reveal for sections
 const revealTargets = document.querySelectorAll(
-  '.about-inner, .feature-item, .section-title, .section-lede, .gallery-item, .carousel, .menu-tabs, .menu-panel, .delivery-inner, .visit-grid'
+  '.split, .trust-item, .section-head, .cat-card, .carousel, .menu-tabs, .menu-panel, .delivery-inner, .visit-card, .cta-band'
 );
 revealTargets.forEach(el => el.classList.add('reveal'));
 
@@ -59,7 +70,7 @@ if ('IntersectionObserver' in window) {
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.12 });
   revealTargets.forEach(el => io.observe(el));
 } else {
   revealTargets.forEach(el => el.classList.add('is-visible'));
@@ -117,7 +128,6 @@ if ('IntersectionObserver' in window) {
     Array.from(dotsWrap.children).forEach((dot, i) => {
       dot.classList.toggle('is-active', i === index);
     });
-    // Carousel loops, so prev/next stay enabled at every position.
   }
 
   function next() {
@@ -143,12 +153,11 @@ if ('IntersectionObserver' in window) {
   viewport.addEventListener('focusin', () => clearInterval(autoplayId));
   viewport.addEventListener('focusout', restartAutoplay);
 
-  // Touch / mouse / pen swipe support
   let startX = 0;
   let startY = 0;
   let deltaX = 0;
   let dragging = false;
-  let axisLocked = null; // 'x' | 'y' | null
+  let axisLocked = null;
   let baseOffset = 0;
 
   function currentOffsetPx() {
@@ -180,7 +189,7 @@ if ('IntersectionObserver' in window) {
     }
 
     if (axisLocked === 'x') {
-      e.preventDefault(); // stop vertical page scroll only once a horizontal swipe is confirmed
+      e.preventDefault();
       track.style.transform = `translateX(${-baseOffset + deltaX}px)`;
     }
   }, { passive: false });
@@ -201,12 +210,9 @@ if ('IntersectionObserver' in window) {
   track.addEventListener('pointerup', endDrag);
   track.addEventListener('pointercancel', endDrag);
   track.addEventListener('pointerleave', (e) => {
-    // Only end the drag if the pointer actually left while dragging with a mouse;
-    // touch pointers are captured so this won't fire mid-swipe on mobile.
     if (dragging && e.pointerType === 'mouse') endDrag();
   });
 
-  // Keyboard support
   viewport.setAttribute('tabindex', '0');
   viewport.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') { next(); restartAutoplay(); }
@@ -228,4 +234,26 @@ if ('IntersectionObserver' in window) {
   update();
   restartAutoplay();
   window.addEventListener('resize', handleResize);
+})();
+
+// ---------- Bottom nav active-section highlighting ----------
+(function bottomNavSpy() {
+  const links = document.querySelectorAll('.bottomnav a[data-section]');
+  if (!links.length) return;
+  const sections = Array.from(links)
+    .map(l => document.getElementById(l.dataset.section))
+    .filter(Boolean);
+
+  if (!('IntersectionObserver' in window) || !sections.length) return;
+
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        links.forEach(l => l.classList.toggle('is-active', l.dataset.section === id));
+      }
+    });
+  }, { rootMargin: '-45% 0px -45% 0px' });
+
+  sections.forEach(s => spy.observe(s));
 })();
